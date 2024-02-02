@@ -1,0 +1,37 @@
+//Percent (prc)
+@function toPercent($px, $from: 100) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+//REM (r)
+@function toRem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+//EM (em)
+@function toEm($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+// Адаптивный шрифт
+
+@mixin fluidText($max, $min, $layout-width: $max-layout-width) {
+	font-size: clamp(#{$min / 16}rem, #{$max / $layout-width * 100}vw, #{$max / 16}rem);
+}
+
+// Сбрасываем свойства ссылок (rL) и кнопок (rB)
+
+@mixin resetLink {
+	color: inherit;
+
+	&, &:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin resetButton {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}

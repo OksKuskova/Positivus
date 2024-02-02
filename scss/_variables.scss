@@ -1,0 +1,28 @@
+:root {
+	// Палитра цветов
+
+	
+	// Шрифт
+	$font-family-base: 'Heebo', sans-serif;
+	$font-family-accent: 'Yantramanav', sans-serif;
+	$font-size: toRem(16); // Размер шрифта по умолчанию по макету
+
+	// Размеры страницы
+	$max-layout-width: 1920; // Ширина макета
+	$container-max-width: 1300; // Ширина контентной части по макету
+	$container-padding-x: 15; // Внустренние отступы
+	$container-width: $container-max-width + $container-padding-x * 2;
+
+	$transition-duration: 0.2s;
+	$border: 1px solid currentColor;
+	$border-radius: toRem(30);
+
+	$input-height: toRem(54);
+	$header-height: toRem(90);
+
+	// Медиа-запросы
+	$pc: toEm($container-width);
+	$tablet: toEm(991.98); 
+	$mobile: toEm(767.98); 
+	$mobile-small: toEm(479.98);
+}

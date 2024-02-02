@@ -1,0 +1,45 @@
+body {
+	font-family: $font-family-base;
+	font-size: $font-size;
+	font-weight: 300;
+	line-height: 1.75;
+	letter-spacing: toRem(0.8);
+	background-color: $blackColor;
+	color: $lightGrayColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $whiteColor;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+a, 
+button, 
+input, 
+textarea, 
+svg > * {
+	transition-duration: $transition-duration;
+}
+
+a, button {	
+	@media (any-hover: hover) {
+		&:hover {
+			color: $lightGrayColor;
+		}
+	}	
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+	 > main {
+		flex: 1 1 auto;
+	}
+
+	> * {
+		min-width: 0;
+	}
+}
